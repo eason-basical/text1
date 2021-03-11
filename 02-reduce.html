@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 练习1、求数组a1元素的和
+      const a1 = [1, 2, 3, 4];
+      // const newArr = a1.reduce(函数， 初始值)
+      // const num = a1.reduce((pre, val) => {
+      //   // pre 0 , val 1
+      //   // pre 1 , val 2
+      //   // pre 3 , val 3
+      //   // pre 6, val 4
+      //   return pre + val
+      // }, 0)
+      // console.log(num)
+      // const num = a1.reduce((pre, val) => pre + val, 0)
+      // console.log(num)
+
+      // 练习2、求购物车中所有商品的价格总和，求购物车中所有选中商品的价格总和
+      let a2 = [
+        {
+          price: 100,
+          brand: "凤凰",
+          num: 2,
+          isTrue: true,
+        },
+        {
+          price: 1000,
+          brand: "捷安特",
+          num: 3,
+          isTrue: false,
+        },
+        {
+          price: 500,
+          brand: "迪卡侬",
+          num: 1,
+          isTrue: true,
+        },
+      ];
+      // let num = a2.reduce((pre, val) => pre + val.price * val.num, 0)
+      // console.log(num)
+      // let num = a2.reduce((pre, val) => {
+      //   // if(val.isTrue) {
+      //   //   return pre + val.price * val.num
+      //   // } else {
+      //   //   return pre
+      //   // }
+      //   return val.isTrue ? pre + val.price * val.num : pre
+      // }, 0)
+      // let num = a2.reduce((pre, val) => val.isTrue ? pre + val.price * val.num : pre, 0)
+      // console.log(num)
+
+      // 3、计算数组中每个元素出现的次数
+      let names = ["Alice", "Bob", "Tiff", "Bruce", "Alice"]; // { 'Alice': 2, 'Bob': 1, ……}
+      // let obj = {}
+      // obj.age = 18
+      // console.log('age' in obj) //true
+
+      // let obj = names.reduce((sum, item) => {
+      //   if (item in sum) {
+      //     console.log(sum[item]);
+      //     sum[item]++;
+      //   } else {
+      //     sum[item] = 1; //sum["Alice"] = 1
+      //   }
+      //   return sum;
+      // }, {});
+      // console.log(obj);
+
+      // 4、数组去重 https://juejin.cn/post/6844903936017563655
+      let a3 = [1, 2, 3, 4, 4, 1];
+      // let a = new Set(a3);
+      // console.log(a);
+      // let newArr = [...new Set(a3)];
+      // console.log(newArr);
+      // 拼接数组
+      // let a4 = [2, 3, 4, 5, 6]
+      // let a5 = [2]
+      // // console.log(a3.concat(a4))
+      // console.log([...a3, ...a4, ...a5, 123])
+      // arr.slice
+      // let obj = {
+      //   username: 'zs',
+      //   preson: {
+      //     name: 'ww'
+      //   }
+      // }
+      // let newObj = {...obj, age: 18}
+      // // console.log(newObj)
+      // obj.preson.name = 'ls'
+      // console.log('obj:', obj)
+      // console.log('newObj:', newObj)
+      // let a3 = [1, 2, 3, 4, 4, 1]
+      // let newArr = a3.reduce((pre, val) => {
+      //   // indexOf
+      //   // if (pre.indexOf(val) === -1) {
+      //   //   return pre.push(val) // 长度
+      //   // } else {
+      //   //   return pre
+      //   // }
+      //   if (!pre.includes(val)) {
+      //     pre.push(val)
+      //   }
+      //   return pre
+      // }, [])
+      // console.log(newArr)
+
+      // 5、将二维数组转化为一维
+      // let a4 = [[0, 1], [2, 3], [4, 5], 1]
+      // let newArr = a4.reduce((pre, val) => pre.concat(val), [])
+      // // let newArr = a4.reduce((pre, val) => [...pre, ...val], [])
+      // console.log(newArr)
+
+      // 6、将多维数组转化为一维 作业
+      // let a5 = [
+      //   [0, 1],
+      //   [2, 3],
+      //   [4, [5, 6, 7]],
+      // ]
+    </script>
+  </body>
+</html>
